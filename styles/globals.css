@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+main{
+    background-image: url("../images/garageWallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
