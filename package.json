@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/howler": "^2.2.7",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "framer-motion": "^7.6.7",
+    "howler": "^2.2.3",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

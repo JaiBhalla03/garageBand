@@ -4,10 +4,17 @@ import Image from "next/image";
 import piano from "../Images/piano.png"
 import drumset from "../Images/drumset.png";
 import {motion} from "framer-motion"
-//import pianoAudio from "../Sounds/piano.wav"
+import {Howl, Howler} from "howler";
 
 
 export default function Home() {
+    const SoundPlay = (src:string) =>{
+        const sound = new Howl({
+            src,
+            html5: true
+        });
+        sound.play();
+    }
 
   return (
       <main className="h-screen pb-4 pt-10 pl-10 pr-10">
@@ -22,7 +29,9 @@ export default function Home() {
                   <div className="flex justify-between">
                       <motion.div
                           whileTap={{scale: 0.75}}
-                          className="relative ease-in-out duration-100 inline-block hover:scale-110">
+                          className="relative ease-in-out duration-100 inline-block hover:scale-110"
+                          onClick={() => {SoundPlay("https://www.mboxdrive.com/drum.mp3")}}
+                      >
                           <Link href="/drumset">
                               <Image
                                   src={drumset}
@@ -35,7 +44,9 @@ export default function Home() {
                       </motion.div>
                       <motion.div
                           whileTap={{scale: 0.75}}
-                          className="relative ease-in-out duration-100 inline-block hover:scale-110">
+                          className="relative ease-in-out duration-100 inline-block hover:scale-110"
+                          onClick={() => {SoundPlay("https://www.mboxdrive.com/piano.mp3")}}
+                      >
                           <Link href="/piano">
                               <Image
                                   src={piano}
