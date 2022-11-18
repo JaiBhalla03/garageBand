@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Howl, Howler} from "howler";
 
 const Piano = () => {
@@ -15,10 +15,11 @@ const Piano = () => {
         sound.play();
         const timeOut = setTimeout(undoKey,200);
     }
-    document.addEventListener("keydown", () => {
-        note("https://www.mboxdrive.com/piano-g-6200.mp3")
-    })
-
+    useEffect(()=>{
+        document.addEventListener("keydown", () => {
+            note("https://www.mboxdrive.com/piano-g-6200.mp3")
+        })
+    }, [])
     const unclick: string = "h-full bg-white border-2 border-blue-100 rounded-b-md w-12"
     const clicked: string = "h-full bg-gray-300 border-2 border-blue-100 rounded-b-md w-12"
     return (
