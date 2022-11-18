@@ -5,8 +5,14 @@
 @import "tailwindcss/utilities";
 
 
-main{
+#home_main{
     background-image: url("../Images/garageWallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#piano_main{
+    background-image: url("../Images/piano_cover.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

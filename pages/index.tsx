@@ -17,7 +17,7 @@ export default function Home() {
     }
 
   return (
-      <main className="h-screen pb-4 pt-10 pl-10 pr-10">
+      <main className="h-screen pb-4 pt-10 pl-10 pr-10" id="home_main">
           <Fragment>
               <title>
                   Garage band
