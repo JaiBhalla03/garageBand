@@ -11,7 +11,7 @@ const Piano = () => {
                 <div className="flex p-1 h-1/2 bg-gray-100">
                     {
                         notes.map(note=>(
-                            <Key voice={note.src}/>
+                            <Key voice={note.src1} keyCode={notes.indexOf(note)}/>
                         ))
                     }
                 </div>
