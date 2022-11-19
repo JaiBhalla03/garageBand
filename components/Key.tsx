@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Howl, Howler} from "howler";
 
+// @ts-ignore
 const Key = ({voice}) => {
     const [style, setStyle] = useState(true);
     const undoKey = () => {
